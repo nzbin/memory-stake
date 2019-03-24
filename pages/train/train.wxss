@@ -1,0 +1,9 @@
+/* pages/train/train.wxss */
+.memory-stake-img {
+  display: block;
+  width: 300rpx;
+  height: 300rpx;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  background: #eee;
+}

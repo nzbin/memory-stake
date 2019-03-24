@@ -17,6 +17,18 @@ Page({
       url: '../logs/logs'
     })
   },
+  // 跳转练习页面
+  bindViewTrain() {
+    wx.navigateTo({
+      url: '../train/train'
+    })
+  },
+  // 跳转挑战页面
+  bindViewChallenge() {
+    wx.navigateTo({
+      url: '../challenge/challenge'
+    })
+  },
   onLoad() {
     if (app.globalData.userInfo) {
       this.setData!({

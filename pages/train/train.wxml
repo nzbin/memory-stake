@@ -1,0 +1,9 @@
+<!--pages/train/train.wxml-->
+<view>
+  <image class="memory-stake-img" src="{{imgUrl}}" mode="aspectFit"></image>
+  <text>{{num}}</text>
+</view>
+<view>
+  <button bindtap="prev">上一个</button>
+  <button bindtap="next">下一个</button>
+</view>

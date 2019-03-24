@@ -16,6 +16,13 @@
   color: #aaa;
 }
 
-.usermotto {
-  margin-top: 200px;
+.block {
+  width: 100%;
+  background: #f5f5f5;
+  text-align: center;
+  line-height: 3;
+}
+
+.block + .block {
+  border-top: 1px solid #eee;
 }
