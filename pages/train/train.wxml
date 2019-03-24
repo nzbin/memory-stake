@@ -1,9 +1,18 @@
 <!--pages/train/train.wxml-->
-<view>
+<view class="container">
   <image class="memory-stake-img" src="{{imgUrl}}" mode="aspectFit"></image>
-  <text>{{num}}</text>
-</view>
-<view>
-  <button bindtap="prev">上一个</button>
-  <button bindtap="next">下一个</button>
+  <view class="text-center">
+    <text class="memory-stake-text">{{numstr}}</text>
+  </view>
+  <view class="btn-group">
+    <button bindtap="prev" class="btn">上一个</button>
+    <button bindtap="next" class="btn">下一个</button>
+  </view>
+  <view class="select">
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        当前选择：{{array[index]}}
+      </view>
+    </picker>
+  </view>
 </view>

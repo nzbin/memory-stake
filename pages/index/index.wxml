@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="block" bindtap="bindViewTrain">
-    <text>练习</text>
+  <view class="block">
+    <button bindtap="bindViewTrain">练习</button>
   </view>
-  <view class="block" bindtap="bindViewTap">
-    <text>挑战</text>
+  <view class="block">
+    <button bindtap="bindViewChallenge">挑战</button>
   </view>
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>

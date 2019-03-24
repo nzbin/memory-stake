@@ -1,2 +1,6 @@
 <!--pages/challenge/challenge.wxml-->
-<text>pages/challenge/challenge.wxml</text>
+<view class="container">
+  <view class="text-center">
+    <text>{{num}}</text>
+  </view>
+</view>

@@ -1,9 +1,21 @@
 /* pages/train/train.wxss */
 .memory-stake-img {
   display: block;
-  width: 300rpx;
-  height: 300rpx;
   margin: 0 auto;
-  border: 1px solid #ddd;
-  background: #eee;
+  background: #f9f9f9;
+}
+
+.memory-stake-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.btn-group {
+  display: flex;
+  margin-bottom: 50rpx;
+}
+picker {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
