@@ -2,13 +2,59 @@
 
 page {
   height: 100%;
-  background: #f5f5f5;
+  background: #efeff4;
 }
 
 .container {
+  height: 100%;
   background: #fff;
+}
+
+.block {
+  background: #fff;
+  margin: 30rpx 0;
+  overflow: auto;
 }
 
 .text-center {
   text-align: center;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.m-30 {
+  margin-bottom: 30rpx;
+}
+
+.m-y-30 {
+  margin: 30rpx 0;
+}
+
+.list {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+}
+
+.list .item-content {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+  min-height: 44rpx;
+  padding-left: 30rpx;
+}
+
+.list .item-content+.item-content {
+  border-top: 1px solid #efeff4;
 }

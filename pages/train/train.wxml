@@ -1,18 +1,27 @@
 <!--pages/train/train.wxml-->
-<view class="container">
-  <image class="memory-stake-img" src="{{imgUrl}}" mode="aspectFit"></image>
+<view class="block">
+  <view class="memory-stake-img-wrap">
+    <image class="memory-stake-img-bg" src="{{imgUrl}}" mode="aspectFill"></image>
+    <image class="memory-stake-img" src="{{imgUrl}}" mode="aspectFit"></image>
+  </view>
   <view class="text-center">
     <text class="memory-stake-text">{{numstr}}</text>
   </view>
-  <view class="btn-group">
+  <view class="d-flex m-30">
     <button bindtap="prev" class="btn">上一个</button>
     <button bindtap="next" class="btn">下一个</button>
   </view>
-  <view class="select">
+</view>
+
+<view class="list">
+  <view class="item-content">
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
       <view class="picker">
         当前选择：{{array[index]}}
       </view>
     </picker>
+  </view>
+  <view class="item-content">
+    <input maxlength="2" placeholder="输入两位数查找" bindblur="search" type="number" value="{{index+1}}" />
   </view>
 </view>

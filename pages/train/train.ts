@@ -49,6 +49,14 @@ Page({
       numstr: genNumStr(parseInt(e.detail.value) + 1)
     })
   },
+  // 查找
+  search(e: any) {
+    this.setData!({
+      index: transNum(parseInt(e.detail.value ? e.detail.value : 1) - 1),
+      imgUrl: genImgUrl(parseInt(e.detail.value ? e.detail.value : 1)),
+      numstr: genNumStr(parseInt(e.detail.value ? e.detail.value : 1))
+    })
+  }
   //生命周期函数--监听页面初次渲染完成
   // onReady() {
 
