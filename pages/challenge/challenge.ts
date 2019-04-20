@@ -11,6 +11,15 @@ Page({
     })
   },
   start() {
-
+    const timer = () => {
+      this.data.percent--;
+      if (this.data.percent >= 0) {
+        this.setData!({
+          percent: this.data.percent
+        });
+        setTimeout(timer, 100);
+      }
+    };
+    timer();
   }
 })

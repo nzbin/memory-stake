@@ -17,6 +17,7 @@
     <view class="progress">
       <view class="progress-bar" style="width:{{percent}}%"></view>
     </view>
+    <view>{{percent}}</view>
     <view class="number">
       <text>{{num}}</text>
     </view>
