@@ -1,1 +1,25 @@
 /* pages/challenge/challenge.wxss */
+
+.progress {
+  display: flex;
+  height: 10rpx;
+  overflow: hidden;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  background-color: #007bff;
+  transition: width 0.6s ease;
+}
+
+.number {
+  margin: 30rpx 0;
+}

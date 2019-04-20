@@ -1,6 +1,25 @@
 <!--pages/challenge/challenge.wxml-->
 <view class="container">
-  <view class="text-center">
-    <text>{{num}}</text>
+  <!-- 第一步：选择记忆时间及位数 -->
+  <view class="first-step">
+    <view class="item-content">
+      <input maxlength="2" placeholder="记忆时间" bindblur="search" type="number" />
+    </view>
+    <view class="item-content">
+      <input maxlength="2" placeholder="数字位数" bindblur="search" type="number" />
+    </view>
+    <view class="d-flex m-30">
+      <button bindtap="start" class="btn">开始</button>
+    </view>
   </view>
+  <!-- 第二步：显示倒计时及数字 -->
+  <view class="second-step">
+    <view class="progress">
+      <view class="progress-bar" style="width:{{percent}}%"></view>
+    </view>
+    <view class="number">
+      <text>{{num}}</text>
+    </view>
+  </view>
+  <!-- 第三步：写出数字 -->
 </view>
