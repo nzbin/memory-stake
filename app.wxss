@@ -32,7 +32,7 @@ page {
   display: flex;
 }
 
-.m-30 {
+.m-b-30 {
   margin-bottom: 30rpx;
 }
 
@@ -57,4 +57,18 @@ page {
 
 .list .item-content+.item-content {
   border-top: 1px solid #efeff4;
+}
+
+picker, input {
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }

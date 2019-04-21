@@ -1,26 +1,32 @@
 <!--pages/challenge/challenge.wxml-->
-<view class="container">
-  <!-- 第一步：选择记忆时间及位数 -->
-  <view class="first-step">
-    <view class="item-content">
-      <input maxlength="2" placeholder="记忆时间" bindblur="search" type="number" />
-    </view>
-    <view class="item-content">
-      <input maxlength="2" placeholder="数字位数" bindblur="search" type="number" />
-    </view>
-    <view class="d-flex m-30">
-      <button bindtap="start" class="btn">开始</button>
-    </view>
-  </view>
-  <!-- 第二步：显示倒计时及数字 -->
-  <view class="second-step">
-    <view class="progress">
-      <view class="progress-bar" style="width:{{percent}}%"></view>
-    </view>
-    <view>{{percent}}</view>
-    <view class="number">
-      <text>{{num}}</text>
+<view class="first-step" wx:if="{{firstStepShow}}">
+  <view class="block">
+    <!-- 第一步：选择记忆时间及位数 -->
+    <view class="list">
+      <view class="item-content">
+        <input maxlength="2" placeholder="记忆时间，默认 5s" bindinput="bindTimeInput" type="number" />
+      </view>
+      <view class="item-content">
+        <input maxlength="2" placeholder="数字位数，默认十位数" bindinput="bindDigitInput" type="number" />
+      </view>
     </view>
   </view>
-  <!-- 第三步：写出数字 -->
+  <view class="d-flex">
+    <button bindtap="start" class="btn">开始</button>
+  </view>
+</view>
+<!-- 第二步：显示倒计时及数字 -->
+<view class="container second-step" wx:if="{{secondStepShow}}">
+  <progress percent="{{percent}}" color="'#007bff'" />
+  <view class="number">
+    <text>{{num}}</text>
+  </view>
+</view>
+<!-- 第三步：写出数字 -->
+<view class="block third-step" wx:if="{{thirdStepShow}}">
+  <view class="list">
+    <view class="item-content">
+      <input placeholder="请填写记住的数字" bindblur="check" type="number" />
+    </view>
+  </view>
 </view>

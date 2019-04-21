@@ -7,7 +7,7 @@
   <view class="text-center">
     <text class="memory-stake-text">{{numstr}}</text>
   </view>
-  <view class="d-flex m-30">
+  <view class="d-flex m-b-30">
     <button bindtap="prev" class="btn">上一个</button>
     <button bindtap="next" class="btn">下一个</button>
   </view>
