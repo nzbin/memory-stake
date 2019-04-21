@@ -22,6 +22,6 @@
     </picker>
   </view>
   <view class="item-content">
-    <input maxlength="2" placeholder="输入两位数查找" bindblur="search" type="number" value="{{index+1}}" />
+    <input maxlength="2" placeholder="输入两位数查找" bindblur="search" type="number" value="{{searchIndex}}" />
   </view>
 </view>

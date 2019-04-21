@@ -7,6 +7,7 @@ Page({
     digit: 10, // 数字位数
     percent: 100,
     step: 1,
+    numCheck: -1, // 待校验待数字
   },
   onLoad() {
 
@@ -49,9 +50,14 @@ Page({
       digit: e.detail.value
     })
   },
+  bindCheckInput(e: any) {
+    this.setData!({
+      numCheck: e.detail.value
+    })
+  },
   // 检验输入数字是否正确
-  check(e: any) {
-    if (e.detail.value === this.data.num) {
+  check() {
+    if (this.data.numCheck === this.data.num) {
       wx.showModal({
         title: '😎👍',
         content: '恭喜你，回答正确！',

@@ -6,9 +6,10 @@ Page({
   // 页面的初始数据
   data: {
     array: [] as string[],
-    index: 0,
+    index: 0, // 数组索引
     imgUrl: '',
     numstr: '',
+    searchIndex: 1, // 搜索索引
   },
   // 生命周期函数--监听页面加载
   onLoad() {
@@ -26,19 +27,23 @@ Page({
   // 下一个数字
   next() {
     this.data.index++;
+    this.data.searchIndex++;
     this.setData!({
       index: transNum(this.data.index),
       imgUrl: genImgUrl(this.data.index + 1),
-      numstr: genNumStr(this.data.index + 1)
+      numstr: genNumStr(this.data.index + 1),
+      searchIndex: transNum(this.data.searchIndex),
     });
   },
   // 上一个数字
   prev() {
     this.data.index--;
+    this.data.searchIndex--;
     this.setData!({
       index: transNum(this.data.index),
       imgUrl: genImgUrl(this.data.index + 1),
-      numstr: genNumStr(this.data.index + 1)
+      numstr: genNumStr(this.data.index + 1),
+      searchIndex: transNum(this.data.searchIndex),
     });
   },
   bindPickerChange(e: any) {
@@ -46,7 +51,8 @@ Page({
     this.setData!({
       index: parseInt(e.detail.value),
       imgUrl: genImgUrl(parseInt(e.detail.value) + 1),
-      numstr: genNumStr(parseInt(e.detail.value) + 1)
+      numstr: genNumStr(parseInt(e.detail.value) + 1),
+      searchIndex: parseInt(e.detail.value) + 1,
     })
   },
   // 查找
@@ -54,7 +60,8 @@ Page({
     this.setData!({
       index: transNum(parseInt(e.detail.value ? e.detail.value : 1) - 1),
       imgUrl: genImgUrl(parseInt(e.detail.value ? e.detail.value : 1)),
-      numstr: genNumStr(parseInt(e.detail.value ? e.detail.value : 1))
+      numstr: genNumStr(parseInt(e.detail.value ? e.detail.value : 1)),
+      searchIndex: e.detail.value ? e.detail.value : 1,
     })
   }
   //生命周期函数--监听页面初次渲染完成

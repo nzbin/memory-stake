@@ -11,9 +11,7 @@
       </view>
     </view>
   </view>
-  <view class="d-flex">
-    <button bindtap="start" class="btn">开始</button>
-  </view>
+  <button bindtap="start" class="btn">开始挑战</button>
 </view>
 <!-- 第二步：显示倒计时及数字 -->
 <view class="container second-step" wx:elif="{{step===2}}">
@@ -23,10 +21,13 @@
   </view>
 </view>
 <!-- 第三步：写出数字 -->
-<view class="block third-step" wx:else="{{step===3}}">
-  <view class="list">
-    <view class="item-content">
-      <input placeholder="请填写记住的数字" bindblur="check" type="number" />
+<view class="third-step" wx:else="{{step===3}}">
+  <view class="block">
+    <view class="list">
+      <view class="item-content">
+        <input placeholder="请填写记住的数字" bindinput="bindCheckInput" type="number" />
+      </view>
     </view>
   </view>
+  <button bindtap="check" class="btn">确定</button>
 </view>
