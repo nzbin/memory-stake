@@ -1,5 +1,5 @@
 <!--pages/challenge/challenge.wxml-->
-<view class="first-step" wx:if="{{firstStepShow}}">
+<view class="first-step" wx:if="{{step===1}}">
   <view class="block">
     <!-- 第一步：选择记忆时间及位数 -->
     <view class="list">
@@ -16,14 +16,14 @@
   </view>
 </view>
 <!-- 第二步：显示倒计时及数字 -->
-<view class="container second-step" wx:if="{{secondStepShow}}">
+<view class="container second-step" wx:elif="{{step===2}}">
   <progress percent="{{percent}}" color="'#007bff'" />
   <view class="number">
     <text>{{num}}</text>
   </view>
 </view>
 <!-- 第三步：写出数字 -->
-<view class="block third-step" wx:if="{{thirdStepShow}}">
+<view class="block third-step" wx:else="{{step===3}}">
   <view class="list">
     <view class="item-content">
       <input placeholder="请填写记住的数字" bindblur="check" type="number" />

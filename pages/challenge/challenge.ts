@@ -6,9 +6,7 @@ Page({
     time: 5, // 默认记忆时间
     digit: 10, // 数字位数
     percent: 100,
-    firstStepShow: true,
-    secondStepShow: false,
-    thirdStepShow: false
+    step: 1,
   },
   onLoad() {
 
@@ -17,12 +15,11 @@ Page({
 
     this.setData!({
       num: genRandNum(this.data.digit), // 生成数字
-      firstStepShow: false,
-      secondStepShow: true,
+      step: 2,
     });
 
     // 倒计时间隔时间
-    const ms = 10 * this.data.time;
+    const ms = 10 * (this.data.time - 1);
 
     const countDown = () => {
       this.data.percent--;
@@ -34,9 +31,7 @@ Page({
       } else {
         // 计时结束显示第三步
         this.setData!({
-          firstStepShow: false,
-          secondStepShow: false,
-          thirdStepShow: true,
+          step: 3,
         });
       }
     };
