@@ -19,7 +19,11 @@
   margin: 0 auto;
 }
 
-.memory-stake-text {
+.memory-stake-num {
   font-size: 36px;
   font-weight: bold;
+}
+
+.memory-stake-text {
+  font-size: 18px;
 }

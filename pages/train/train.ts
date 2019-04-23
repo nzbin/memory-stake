@@ -1,6 +1,7 @@
 // pages/train/train.js
 import { genImgUrl } from '../../utils/imgs';
 import { transNum, genNumStr } from '../../utils/util';
+import { dict } from '../../data/dict';
 
 Page({
   // 页面的初始数据
@@ -10,6 +11,7 @@ Page({
     imgUrl: '',
     numstr: '',
     searchIndex: 1, // 搜索索引
+    numtext: '', // 数字文案
   },
   // 生命周期函数--监听页面加载
   onLoad() {
@@ -21,7 +23,8 @@ Page({
     this.setData!({
       array: arr,
       imgUrl: genImgUrl(this.data.index + 1),
-      numstr: genNumStr(this.data.index + 1)
+      numstr: genNumStr(this.data.index + 1),
+      numtext: dict[arr[0]]
     });
   },
   // 下一个数字
@@ -32,6 +35,7 @@ Page({
       index: transNum(this.data.index),
       imgUrl: genImgUrl(this.data.index + 1),
       numstr: genNumStr(this.data.index + 1),
+      numtext: dict[this.data.array[this.data.index]],
       searchIndex: transNum(this.data.searchIndex),
     });
   },
@@ -43,6 +47,7 @@ Page({
       index: transNum(this.data.index),
       imgUrl: genImgUrl(this.data.index + 1),
       numstr: genNumStr(this.data.index + 1),
+      numtext: dict[this.data.array[this.data.index]],
       searchIndex: transNum(this.data.searchIndex),
     });
   },
@@ -52,6 +57,7 @@ Page({
       index: parseInt(e.detail.value),
       imgUrl: genImgUrl(parseInt(e.detail.value) + 1),
       numstr: genNumStr(parseInt(e.detail.value) + 1),
+      numtext: dict[this.data.array[e.detail.value]],
       searchIndex: parseInt(e.detail.value) + 1,
     })
   },
@@ -61,6 +67,7 @@ Page({
       index: transNum(parseInt(e.detail.value ? e.detail.value : 1) - 1),
       imgUrl: genImgUrl(parseInt(e.detail.value ? e.detail.value : 1)),
       numstr: genNumStr(parseInt(e.detail.value ? e.detail.value : 1)),
+      numtext: dict[this.data.array[transNum(parseInt(e.detail.value ? e.detail.value : 1) - 1)]],
       searchIndex: e.detail.value ? e.detail.value : 1,
     })
   }

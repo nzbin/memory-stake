@@ -5,7 +5,10 @@
     <image class="memory-stake-img" src="{{imgUrl}}" mode="aspectFit"></image>
   </view>
   <view class="text-center">
-    <text class="memory-stake-text">{{numstr}}</text>
+    <text class="memory-stake-num">{{numstr}}</text>
+  </view>
+  <view class="text-center">
+    <text class="memory-stake-text">{{numtext}}</text>
   </view>
   <view class="d-flex m-b-30">
     <button bindtap="prev" class="btn">上一个</button>
