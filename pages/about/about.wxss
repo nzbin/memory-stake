@@ -1,0 +1,7 @@
+/* pages/about/about.wxss */
+.p {
+  display: block;
+  padding: 0 30rpx;
+  margin: 30rpx 0;
+  text-indent: 2em;
+}

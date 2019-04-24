@@ -1,4 +1,3 @@
-// pages/train/train.js
 import { genImgUrl } from '../../utils/imgs';
 import { transNum, genNumStr } from '../../utils/util';
 import { dict } from '../../data/dict';

@@ -14,6 +14,6 @@
     <button bindtap="bindViewChallenge">挑战</button>
   </view>
   <view>
-    <button plain="true">说明</button>
+    <button bindtap="bindViewAbout">说明</button>
   </view>
 </view>

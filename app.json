@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/train/train",
-    "pages/challenge/challenge"
+    "pages/challenge/challenge",
+    "pages/about/about"
   ],
   "window": {
     "backgroundTextStyle": "light",

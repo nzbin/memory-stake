@@ -1,4 +1,3 @@
-//index.js
 //获取应用实例
 import { IMyApp } from '../../app'
 
@@ -27,6 +26,12 @@ Page({
   bindViewChallenge() {
     wx.navigateTo({
       url: '../challenge/challenge'
+    })
+  },
+  // 跳转挑战页面
+  bindViewAbout() {
+    wx.navigateTo({
+      url: '../about/about'
     })
   },
   onLoad() {
