@@ -10,5 +10,6 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "记忆树桩",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -32,6 +32,10 @@ page {
   display: flex;
 }
 
+.m-t-30 {
+  margin-top: 30rpx;
+}
+
 .m-b-30 {
   margin-bottom: 30rpx;
 }

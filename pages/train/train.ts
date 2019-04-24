@@ -35,7 +35,7 @@ Page({
       index: transNum(this.data.index),
       imgUrl: genImgUrl(this.data.index + 1),
       numstr: genNumStr(this.data.index + 1),
-      numtext: dict[this.data.array[this.data.index]],
+      numtext: dict[this.data.array[transNum(this.data.index)]],
       searchIndex: transNum(this.data.searchIndex),
     });
   },
@@ -47,28 +47,29 @@ Page({
       index: transNum(this.data.index),
       imgUrl: genImgUrl(this.data.index + 1),
       numstr: genNumStr(this.data.index + 1),
-      numtext: dict[this.data.array[this.data.index]],
+      numtext: dict[this.data.array[transNum(this.data.index)]],
       searchIndex: transNum(this.data.searchIndex),
     });
   },
   bindPickerChange(e: any) {
-    // console.log('picker发送选择改变，携带值为', e.detail.value)
+    const value = parseInt(e.detail.value);
     this.setData!({
-      index: parseInt(e.detail.value),
-      imgUrl: genImgUrl(parseInt(e.detail.value) + 1),
-      numstr: genNumStr(parseInt(e.detail.value) + 1),
-      numtext: dict[this.data.array[e.detail.value]],
-      searchIndex: parseInt(e.detail.value) + 1,
+      index: value,
+      imgUrl: genImgUrl(value + 1),
+      numstr: genNumStr(value + 1),
+      numtext: dict[this.data.array[value]],
+      searchIndex: value + 1,
     })
   },
   // 查找
   search(e: any) {
+    const value = parseInt(e.detail.value ? e.detail.value : 1);
     this.setData!({
-      index: transNum(parseInt(e.detail.value ? e.detail.value : 1) - 1),
-      imgUrl: genImgUrl(parseInt(e.detail.value ? e.detail.value : 1)),
-      numstr: genNumStr(parseInt(e.detail.value ? e.detail.value : 1)),
-      numtext: dict[this.data.array[transNum(parseInt(e.detail.value ? e.detail.value : 1) - 1)]],
-      searchIndex: e.detail.value ? e.detail.value : 1,
+      index: transNum(value - 1),
+      imgUrl: genImgUrl(value),
+      numstr: genNumStr(value),
+      numtext: dict[this.data.array[transNum(value - 1)]],
+      searchIndex: value,
     })
   }
   //生命周期函数--监听页面初次渲染完成
