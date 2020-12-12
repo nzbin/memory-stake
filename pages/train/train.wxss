@@ -8,6 +8,7 @@
 .memory-stake-img-bg {
   position: absolute;
   display: block;
+  width: 100%;
   filter: blur(20px);
   transform: scale(1.2);
 }
