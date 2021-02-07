@@ -8,6 +8,6 @@
 只要反复练习，你也可以拥有最强大脑。
 
 ## 扫码体验
-![记忆树桩二维码](http://images.cnblogs.com/cnblogs_com/nzbin/1106740/o_ms_qrcode.png)
+![记忆树桩二维码](./media/qrcode.png)
 
 
